@@ -56,6 +56,7 @@ const PROFILE = {
         </div>
       `,
       stack: ["Laravel", "MikroTik API", "Xendit", "MySQL", "Bootstrap"],
+      image: "/portal-iwifi.png",
       links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
     },
     {
