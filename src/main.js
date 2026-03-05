@@ -56,7 +56,47 @@ const PROFILE = {
         </div>
       `,
       stack: ["Laravel", "MikroTik API", "Xendit", "MySQL", "Bootstrap"],
-      image: "/portal-iwifi.png",
+      links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
+    },
+    {
+      id: "p7",
+      title: "OmniChannel Customer Engagement Platform",
+      year: "2024",
+      type: "Helpdesk & CRM System",
+      desc: "Platform manajemen layanan pelanggan terpadu yang menggabungkan WhatsApp, Telegram, Facebook, dan Instagram.",
+      fullDesc: `
+        <p>Sistem OmniChannel ini dirancang untuk membantu bisnis mengelola ratusan percakapan pelanggan dari berbagai platform (WhatsApp, Telegram, Facebook, Instagram) secara efisien dalam satu dashboard pusat.</p>
+        
+        <div class="mt-6 space-y-6">
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Fitur Utama:</h4>
+            <ul class="list-disc pl-5 space-y-2 text-sm">
+              <li><strong>Unified Inbox:</strong> Antarmuka chatting real-time dengan optimistic UI updates (AJAX/Polling).</li>
+              <li><strong>Multi-Channel Integration:</strong> Integrasi API pihak ketiga (Wawp untuk WhatsApp, Telegram MTProto).</li>
+              <li><strong>Agent Dashboard:</strong> Monitoring KPI (Active Chats, Pending Replies) secara interaktif.</li>
+              <li><strong>Ticket Management:</strong> Pembuatan tiket bantuan terstruktur langsung dari percakapan.</li>
+              <li><strong>AI Auto-Reply:</strong> Respon awal otomatis berbasis kecerdasan buatan.</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Infrastruktur & API:</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-400">
+              <li>Webhooks untuk penanganan data asinkron.</li>
+              <li>Sistem enkripsi metadata untuk keamanan lampiran file.</li>
+              <li>Skalabilitas tinggi dengan framework Laravel & Eloquent ORM.</li>
+            </ul>
+          </div>
+        </div>
+      `,
+      stack: [
+        "Laravel",
+        "JavaScript (ES6+)",
+        "Third-party API",
+        "Bootstrap",
+        "Webhooks",
+      ],
+      image: "/omni-channel.png",
       links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
     },
   ],
