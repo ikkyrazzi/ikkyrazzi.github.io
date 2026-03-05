@@ -207,9 +207,11 @@ function renderProjects(filter = "Semua") {
         >
             <div class="aspect-video bg-cloud-100 dark:bg-cloud-900/20 relative group-hover:scale-105 transition-transform duration-700 flex items-center justify-center overflow-hidden pointer-events-none">
                 <div class="absolute inset-0 bg-gradient-to-br from-cloud-400/10 to-transparent"></div>
-                <div class="text-4xl font-black text-cloud-600/20 dark:text-cloud-400/10 italic select-none">
-                    ${p.title ? p.title.split(" ")[0] : "Project"}
-                </div>
+                ${
+                  p.image
+                    ? `<img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">`
+                    : `<div class="text-4xl font-black text-cloud-600/20 dark:text-cloud-400/10 italic select-none">${p.title ? p.title.split(" ")[0] : "Project"}</div>`
+                }
             </div>
             <div class="p-8 pointer-events-none">
                 <div class="flex gap-2 mb-4">
