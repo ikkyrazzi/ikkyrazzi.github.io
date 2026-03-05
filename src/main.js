@@ -9,7 +9,7 @@ const PROFILE = {
   projects: [
     {
       id: "p5",
-      title: "ITTEK Panic Button System",
+      title: "Panic Button System",
       year: "2024",
       type: "IoT & Web App",
       desc: "Sistem monitoring real-time terintegrasi IoT untuk manajemen situasi darurat.",
