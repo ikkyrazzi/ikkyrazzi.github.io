@@ -8,57 +8,6 @@ const PROFILE = {
   whatsapp: "62895411940827",
   projects: [
     {
-      id: "p1",
-      title: "Internal Request System (PNL & SPH)",
-      year: "2025",
-      type: "Web App",
-      desc: "Sistem internal untuk request & tracking dokumen, validasi data, serta integrasi API.",
-      fullDesc:
-        "Sistem Manajemen Permintaan Internal (Internal Request System) dirancang untuk menyederhanakan proses pengadaan dan pelacakan dokumen PNL & SPH dalam skala perusahaan. Sistem ini mencakup alur persetujuan bertingkat, validasi data otomatis, dan dashboard pelacakan real-time untuk meningkatkan efisiensi operasional hingga 40%.",
-      stack: ["Laravel", "REST API", "SQL", "Tailwind"],
-      image: "/assets/foto-RIzvvtI3.PNG", // Placeholder using existing image
-      links: [
-        { label: "Lihat Demo", url: "#", icon: "external" },
-        { label: "Source Code", url: "#", icon: "github" },
-      ],
-    },
-    {
-      id: "p2",
-      title: "Admin Panel + Reseller Management",
-      year: "2024",
-      type: "Web App",
-      desc: "Admin panel untuk kelola data reseller, serial code, dan laporan dasar.",
-      fullDesc:
-        "Platform manajemen reseller yang tangguh yang memungkinkan admin untuk melacak inventaris serial code, memantau penjualan reseller secara real-time, dan menghasilkan laporan keuangan bulanan otomatis. Dibangun dengan fokus pada kemudahan penggunaan dan keamanan akses data.",
-      stack: ["Laravel", "MySQL", "Blade", "Tailwind"],
-      image: "/assets/foto-RIzvvtI3.PNG",
-      links: [{ label: "Source Code", url: "#", icon: "github" }],
-    },
-    {
-      id: "p3",
-      title: "API Service (Logging & Validation)",
-      year: "2024",
-      type: "API",
-      desc: "REST API dengan struktur endpoint konsisten, logging, dan validasi.",
-      fullDesc:
-        "Layanan backend khusus yang menangani validasi data kompleks dan logging aktivitas sistem untuk aplikasi mikroservis. Menggunakan standar keamanan JWT dan dokumentasi API yang lengkap menggunakan Postman.",
-      stack: ["Node.js", "REST", "Postman", "SQL"],
-      image: "/assets/foto-RIzvvtI3.PNG",
-      links: [],
-    },
-    {
-      id: "p4",
-      title: "IT Ticketing + Knowledge Base (SOP)",
-      year: "2025",
-      type: "Web App",
-      desc: "Sistem ticketing untuk support internal + knowledge base SOP agar troubleshooting lebih cepat & terdokumentasi.",
-      fullDesc:
-        "Solusi IT Support terpadu yang menggabungkan sistem pelaporan kendala (ticketing) dengan repositori SOP (Standard Operating Procedure). Membantu teknisi menyelesaikan masalah 30% lebih cepat berkat dokumentasi yang terorganisir dengan baik.",
-      stack: ["Laravel", "MySQL", "Blade", "Tailwind"],
-      image: "/assets/foto-RIzvvtI3.PNG",
-      links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
-    },
-    {
       id: "p5",
       title: "ITTEK Panic Button System",
       year: "2024",
@@ -81,6 +30,34 @@ const PROFILE = {
       stack: ["Laravel", "IoT", "PWA", "MySQL"],
       image: "/panic-button.png",
       links: [{ label: "Lihat Dashboard", url: "#", icon: "external" }],
+    },
+    {
+      id: "p6",
+      title: "Portal iWifi",
+      year: "2024",
+      type: "Web App & Networking",
+      desc: "Sistem manajemen hotspot MikroTik terpusat dengan integrasi pembayaran otomatis QRIS/Xendit.",
+      fullDesc: `
+        <p class="italic text-cloud-600 mb-4">"Solusi manajemen hotspot yang menjembatani MikroTik dengan sistem pembayaran digital, memungkinkan aktivasi paket internet secara mandiri oleh pelanggan hanya dalam hitungan detik."</p>
+        
+        <p>Aplikasi berbasis web ini dirancang untuk mempermudah pengelolaan jaringan hotspot MikroTik secara profesional dan otomatis tanpa perlu membuka Winbox.</p>
+        
+        <div class="mt-6 space-y-4">
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Fitur Unggulan:</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              <li><strong>Multi-Router Management:</strong> Dashboard admin terpusat untuk banyak lokasi hotspot.</li>
+              <li><strong>Automated Provisioning:</strong> Sinkronisasi otomatis User Profile & User via MikroTik API.</li>
+              <li><strong>Payment Integration:</strong> Pembayaran otomatis QRIS/E-Wallet (Xendit) dengan callback real-time.</li>
+              <li><strong>Smart Masking:</strong> Pengaturan Address Pool & Time Masking secara valid dan real-time.</li>
+              <li><strong>MAC Locking:</strong> Perlindungan akun untuk mencegah penyalahgunaan login.</li>
+            </ul>
+          </div>
+        </div>
+      `,
+      stack: ["Laravel", "MikroTik API", "Xendit", "MySQL", "Bootstrap"],
+      image: "/portal-iwifi.png",
+      links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
     },
   ],
   experience: [
