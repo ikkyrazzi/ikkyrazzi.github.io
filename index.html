@@ -421,49 +421,10 @@
           </div>
 
           <div id="projects-grid" class="grid md:grid-cols-2 gap-8">
-            <!-- Internal Request System -->
-            <div
-              class="group relative bg-white dark:bg-navy-800 rounded-[2rem] overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-cloud-200/50 dark:hover:shadow-none transition-all duration-500"
-            >
-              <div
-                class="aspect-video bg-cloud-100 dark:bg-cloud-900/20 relative group-hover:scale-105 transition-transform duration-700"
-              >
-                <!-- Icon Placeholder -->
-                <div
-                  class="absolute inset-0 flex items-center justify-center text-cloud-600/20 dark:text-cloud-400/10 font-black text-8xl italic"
-                >
-                  PNL
-                </div>
-              </div>
-              <div class="p-8">
-                <div class="flex gap-2 mb-4">
-                  <span
-                    class="px-3 py-1 bg-cloud-50 dark:bg-cloud-900/30 text-cloud-600 text-xs font-bold rounded-full"
-                    >Web App</span
-                  >
-                  <span
-                    class="px-3 py-1 bg-slate-50 dark:bg-slate-900/30 text-slate-500 text-xs font-bold rounded-full"
-                    >2025</span
-                  >
-                </div>
-                <h3
-                  class="text-2xl font-bold mb-3 group-hover:text-cloud-600 transition-colors"
-                >
-                  Internal Request System (PNL & SPH)
-                </h3>
-                <p
-                  class="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed"
-                >
-                  Sistem internal untuk request & tracking dokumen, validasi
-                  data, serta integrasi API.
-                </p>
-                <div
-                  class="flex items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-700 text-xs font-bold text-slate-400"
-                >
-                  <span>Laravel</span><span>REST API</span><span>SQL</span>
-                </div>
-              </div>
-            </div>
+            <!-- Projects will be rendered here by main.js -->
+            <div class="animate-pulse bg-slate-100 dark:bg-slate-800 h-64 rounded-3xl"></div>
+            <div class="animate-pulse bg-slate-100 dark:bg-slate-800 h-64 rounded-3xl"></div>
+          </div>
 
             <!-- More projects... -->
           </div>
@@ -599,5 +560,101 @@
     </div>
 
     <script type="module" src="src/main.js"></script>
+
+    <!-- Project Modal -->
+    <div
+      id="project-modal"
+      class="fixed inset-0 z-[150] hidden items-center justify-center p-4 sm:p-6"
+    >
+      <!-- Backdrop -->
+      <div
+        id="modal-backdrop"
+        class="absolute inset-0 bg-slate-900/60 dark:bg-navy-950/80 backdrop-blur-sm opacity-0"
+      ></div>
+
+      <!-- Content -->
+      <div
+        id="modal-content"
+        class="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-navy-900 rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 opacity-0 flex flex-col"
+      >
+        <!-- Modal Header -->
+        <div
+          class="flex justify-between items-center p-6 border-b border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-navy-900/50 backdrop-blur-md sticky top-0 z-10"
+        >
+          <div id="modal-tags" class="flex gap-2"></div>
+          <button
+            onclick="closeProjectModal()"
+            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Scrollable Body -->
+        <div class="overflow-y-auto no-scrollbar p-6 sm:p-10">
+          <div class="flex flex-col gap-8">
+            <div
+              id="modal-image-container"
+              class="aspect-video rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 relative group"
+            >
+              <img
+                id="modal-image"
+                src=""
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-10">
+              <div class="lg:col-span-2">
+                <h2
+                  id="modal-title"
+                  class="font-outfit text-3xl sm:text-4xl font-extrabold mb-4 text-slate-900 dark:text-white"
+                ></h2>
+                <div
+                  id="modal-desc"
+                  class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg space-y-4"
+                ></div>
+              </div>
+
+              <div class="space-y-6">
+                <div>
+                  <h4
+                    class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3"
+                  >
+                    Tahun
+                  </h4>
+                  <p
+                    id="modal-year"
+                    class="text-slate-900 dark:text-white font-semibold font-outfit"
+                  ></p>
+                </div>
+                <div>
+                  <h4
+                    class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3"
+                  >
+                    Teknologi
+                  </h4>
+                  <div id="modal-stack" class="flex flex-wrap gap-2"></div>
+                </div>
+                <div id="modal-links" class="pt-4 flex flex-col gap-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
