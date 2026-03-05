@@ -100,6 +100,42 @@ const PROFILE = {
       image: "/omni-channel.png",
       links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
     },
+    {
+      id: "p8",
+      title: "Sistem Absensi Teknisi Berbasis Geofencing",
+      year: "2024",
+      type: "Management System",
+      desc: "Aplikasi manajemen kehadiran modern dengan verifikasi lokasi GPS otomatis (Geofencing).",
+      fullDesc: `
+        <p>Sistem Absensi Teknisi KMPS dirancang untuk meningkatkan kedisiplinan dan akurasi data kerja teknisi di lapangan menggunakan verifikasi lokasi otomatis.</p>
+        
+        <div class="mt-6 space-y-6">
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Fitur Unggulan:</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              <li><strong>Real-time Geofencing:</strong> Verifikasi lokasi GPS otomatis untuk Check-In/Out di radius gedung.</li>
+              <li><strong>Automated Shift Matching:</strong> Validasi absensi berdasarkan jadwal shift dinamis.</li>
+              <li><strong>RBAC:</strong> Pemisahan hak akses Admin, Manager, dan Teknisi yang aman.</li>
+              <li><strong>Reporting System:</strong> Ekspor laporan kehadiran bulanan/harian ke format Excel.</li>
+              <li><strong>Monitoring Dashboard:</strong> Visualisasi status kehadiran teknisi secara real-time.</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Teknologi & Package:</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-400">
+              <li><strong>Laravel 11:</strong> Core framework dengan PHP 8.2+.</li>
+              <li><strong>Tailwind CSS & Alpine.js:</strong> Frontend modern dan interaktif.</li>
+              <li><strong>Spatie Permission:</strong> Manajemen hak akses (RBAC) yang granular.</li>
+              <li><strong>Maatwebsite Excel:</strong> Sistem pelaporan data yang efisien.</li>
+            </ul>
+          </div>
+        </div>
+      `,
+      stack: ["Laravel 11", "Tailwind", "Alpine.js", "MySQL", "Geofencing"],
+      image: "/absensi-teknisi.png",
+      links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
+    },
   ],
   experience: [
     {
