@@ -136,6 +136,43 @@ const PROFILE = {
       image: "/absensi-teknisi.png",
       links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
     },
+    {
+      id: "p9",
+      title:
+        "Sistem Pengelolaan Pengaduan & Operasional Pelanggan Terintegrasi (KMPS)",
+      year: "2025",
+      type: "Operations System",
+      desc: "Platform manajemen pengaduan pelanggan komprehensif mulai dari keluhan hingga billing otomatis.",
+      fullDesc: `
+        <p>Membangun platform manajemen pengaduan pelanggan berbasis web yang komprehensif untuk meningkatkan efisiensi operasional perusahaan.</p>
+        
+        <div class="mt-6 space-y-6">
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Siklus Layanan Terintegrasi:</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              <li><strong>Work Order Management:</strong> Penjadwalan cerdas dan pemantauan progres teknisi di lapangan.</li>
+              <li><strong>Billing & Invoice:</strong> Pembuatan invoice otomatis dan laporan penuaan piutang (Aging Report).</li>
+              <li><strong>Telegram Integration:</strong> Notifikasi real-time via Telegram Bot untuk percepatan respon.</li>
+              <li><strong>Multi-Role Access:</strong> Hak akses granular untuk Admin, Teknisi, Billing, dan Customer.</li>
+              <li><strong>Data Export:</strong> Pelaporan data operasional ke format Excel untuk analisis manajemen.</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-bold text-slate-900 dark:text-white mb-2">Back-end & Packaged Tools:</h4>
+            <ul class="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-400">
+              <li><strong>Laravel 11:</strong> Core engine dengan PHP 8.2+.</li>
+              <li><strong>Spatie Permission:</strong> Manajemen RBAC yang sangat aman.</li>
+              <li><strong>GuzzleHTTP:</strong> Integrasi asinkron dengan API API Telegram.</li>
+              <li><strong>Maatwebsite Excel:</strong> Pengolahan data laporan skala besar.</li>
+            </ul>
+          </div>
+        </div>
+      `,
+      stack: ["Laravel 11", "MySQL", "Telegram API", "Bootstrap", "Vite"],
+      image: "/Pengelolaan Pengaduan.png",
+      links: [{ label: "Lihat Demo", url: "#", icon: "external" }],
+    },
   ],
   experience: [
     {
