@@ -79,7 +79,7 @@ const PROFILE = {
         </div>
       `,
       stack: ["Laravel", "IoT", "PWA", "MySQL"],
-      image: "/assets/foto-RIzvvtI3.PNG", // Placeholder
+      image: "/panic-button.png",
       links: [{ label: "Lihat Dashboard", url: "#", icon: "external" }],
     },
   ],
