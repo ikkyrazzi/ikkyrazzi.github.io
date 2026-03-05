@@ -10,7 +10,7 @@ const PROFILE = {
     {
       id: "p5",
       title: "Panic Button System",
-      year: "2024",
+      year: "2026",
       type: "IoT & Web App",
       desc: "Sistem monitoring real-time terintegrasi IoT untuk manajemen situasi darurat.",
       fullDesc: `
@@ -34,7 +34,7 @@ const PROFILE = {
     {
       id: "p6",
       title: "Portal iWifi",
-      year: "2024",
+      year: "2026",
       type: "Web App & Networking",
       desc: "Sistem manajemen hotspot MikroTik terpusat dengan integrasi pembayaran otomatis QRIS/Xendit.",
       fullDesc: `
@@ -62,7 +62,7 @@ const PROFILE = {
     {
       id: "p7",
       title: "OmniChannel Customer Engagement Platform",
-      year: "2024",
+      year: "2026",
       type: "Helpdesk & CRM System",
       desc: "Platform manajemen layanan pelanggan terpadu yang menggabungkan WhatsApp, Telegram, Facebook, dan Instagram.",
       fullDesc: `
@@ -103,11 +103,11 @@ const PROFILE = {
     {
       id: "p8",
       title: "Sistem Absensi Teknisi Berbasis Geofencing",
-      year: "2024",
+      year: "2025",
       type: "Management System",
       desc: "Aplikasi manajemen kehadiran modern dengan verifikasi lokasi GPS otomatis (Geofencing).",
       fullDesc: `
-        <p>Sistem Absensi Teknisi KMPS dirancang untuk meningkatkan kedisiplinan dan akurasi data kerja teknisi di lapangan menggunakan verifikasi lokasi otomatis.</p>
+        <p>Sistem Absensi Teknisi dirancang untuk meningkatkan kedisiplinan dan akurasi data kerja teknisi di lapangan menggunakan verifikasi lokasi otomatis.</p>
         
         <div class="mt-6 space-y-6">
           <div>
@@ -139,7 +139,7 @@ const PROFILE = {
     {
       id: "p9",
       title:
-        "Sistem Pengelolaan Pengaduan & Operasional Pelanggan Terintegrasi (KMPS)",
+        "Sistem Pengelolaan Pengaduan & Operasional Pelanggan Terintegrasi",
       year: "2025",
       type: "Operations System",
       desc: "Platform manajemen pengaduan pelanggan komprehensif mulai dari keluhan hingga billing otomatis.",
