@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = "AIzaSyBk03hp3bCLaIjvD6UfpenLekPtH2HcZmE";
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 // Chatbot Context (distilled from main.js)
