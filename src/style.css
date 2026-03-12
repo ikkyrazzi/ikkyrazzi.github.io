@@ -86,8 +86,13 @@
   }
 }
 
-.message-animate {
-  animation: slide-in-bottom 0.3s ease-out forwards;
+.message-animate ul {
+  list-style-position: outside;
+  padding-left: 1.25rem;
+}
+
+.message-animate li {
+  margin-bottom: 0.25rem;
 }
 
 /* Modal Animations */

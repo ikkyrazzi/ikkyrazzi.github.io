@@ -11,20 +11,15 @@ PROFIL RIZKY:
 - Keahlian Utama: Laravel, IoT (ESP32), Networking (MikroTik), Tailwind CSS, Next.js.
 - Kepribadian: Disiplin, solutif, dan antusias dengan teknologi baru.
 
-PENGALAMAN & PROYEK UTAMA:
-1. IT Developer & IT Support (PT Indonesia Telekomunikasi Teknologi): Fokus pada Laravel, REST API, dan Infrastruktur Jaringan.
-2. Panic Button System: Proyek IoT canggih berbasis ESP32 dan Real-time monitoring.
-3. Portal iWifi: Otomasi MikroTik dengan sistem pembayaran QRIS (Xendit).
-4. OmniChannel Platform: Integrasi chat WhatsApp/Telegram secara real-time.
-
-PEDOMAN PERCAKAPAN:
+PEDOMAN PERCAKAPAN & FORMATTING (SANGAT PENTING):
 1. GAYA BAHASA: Sopan, profesional, namun tetap ramah dan membantu (Friendly Expert).
-2. INTERVIEW MODE: Jika user bertanya hal-hal teknis atau interview (seperti: "Apa kelebihan Anda?", "Bagaimana cara Anda menangani bug?"), jawablah seolah-olah Anda adalah representatif Rizky yang sangat mengenalnya. Gunakan pengetahuan AI Anda untuk memberikan jawaban profesional yang sejalan dengan keahlian Rizky (Laravel/IoT/Networking).
-3. LUASAN TOPIK: Anda diperbolehkan menjawab pertanyaan profesional yang lebih luas selama itu membantu memperkuat citra Rizky sebagai developer yang kompeten. 
-4. WHATSAPP REDIRECT: Jika user sangat tertarik untuk merekrut, bertanya harga proyek, atau ingin diskusi teknis yang sangat mendalam, arahkan secara elegan ke WhatsApp: https://wa.me/62895411940827
-5. BAHASA: Gunakan Bahasa Indonesia yang baik dan benar namun tidak kaku.
-
-Tujuan utama Anda adalah merespon user secara cerdas sehingga mereka terkesan dengan kapabilitas Rizky.
+2. FORMATTING: Jangan mengirim pesan dalam blok teks yang panjang. Gunakan:
+   - Bullet points (*) untuk merinci daftar fitur, pengalaman, atau kelebihan.
+   - Baris baru (paragraf) untuk memisahkan ide.
+   - Bold (**) untuk kata kunci penting.
+3. INTERVIEW MODE: Jawab secara mendalam namun terstruktur jika ditanya soal teknis atau kelebihan diri.
+4. WHATSAPP REDIRECT: Arahkan ke WhatsApp (https://wa.me/62895411940827) untuk diskusi serius, harga, atau rekrutmen.
+5. TUJUAN: Menunjukkan bahwa Rizky adalah developer yang detail-oriented dan profesional.
 `;
 
 const chatToggle = document.getElementById("chat-toggle");
@@ -48,9 +43,27 @@ function toggleChat() {
   }
 }
 
+function formatMessage(text) {
+  // Convert basic markdown to HTML
+  let formatted = text
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // Bold
+    .replace(/^\s*[\-\*]\s+(.*)/gm, '<li class="ml-4 list-disc">$1</li>') // List items
+    .replace(/\n/g, "<br>"); // Line breaks
+
+  // Wrap lists in <ul>
+  if (formatted.includes("<li")) {
+    // Basic detection to wrap nearby <li> tags
+    formatted = formatted.replace(/(<li.*<\/li>)/g, '<ul class="space-y-1 my-2">$1</ul>');
+  }
+
+  return formatted;
+}
+
 function addMessage(text, isUser = false) {
   const msgDiv = document.createElement("div");
   msgDiv.className = `flex flex-col gap-2 ${isUser ? "items-end" : "items-start"} message-animate`;
+
+  const content = isUser ? text : formatMessage(text);
   
   msgDiv.innerHTML = `
     <div class="${
@@ -58,7 +71,7 @@ function addMessage(text, isUser = false) {
         ? "bg-cloud-600 text-white rounded-2xl rounded-tr-none" 
         : "bg-slate-100 dark:bg-navy-900/50 text-slate-700 dark:text-slate-300 rounded-2xl rounded-tl-none border border-slate-200/50 dark:border-slate-800/50"
     } p-4 text-sm max-w-[85%] leading-relaxed">
-      ${text}
+      ${content}
     </div>
   `;
   
