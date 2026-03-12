@@ -7,6 +7,10 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
     />
     <title>Muhammad Rizky Herdiansyah | Portfolio</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>"
+    />
     <meta
       name="description"
       content="IT Developer & IT Support Specialist - Membangun solusi web modern dengan Laravel & Tailwind CSS."
@@ -650,5 +654,87 @@
         </div>
       </div>
     </div>
+    <!-- AI Chatbot UI -->
+    <div id="chatbot-container" class="fixed bottom-24 right-8 z-50 flex flex-col items-end gap-4 pointer-events-none">
+      <!-- Chat Window -->
+      <div
+        id="chat-window"
+        class="w-[350px] sm:w-[400px] h-[500px] glass-card rounded-[2.5rem] flex flex-col overflow-hidden opacity-0 invisible translate-y-10 transition-all duration-500 pointer-events-auto"
+      >
+        <!-- Header -->
+        <div class="p-6 bg-cloud-600 flex items-center justify-between shadow-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M12 12v4"/><path d="M9 16v2"/><path d="M15 16v2"/></svg>
+            </div>
+            <div>
+              <h3 class="text-white font-bold text-sm">Rizky's Assistant</h3>
+              <div class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-[10px] text-cloud-100 font-medium tracking-wide">AI Online</span>
+              </div>
+            </div>
+          </div>
+          <button id="close-chat" class="p-2 hover:bg-white/10 rounded-full transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Messages Area -->
+        <div id="chat-messages" class="flex-1 overflow-y-auto p-6 space-y-4 scroll-smooth">
+          <!-- Welcome Message -->
+          <div class="flex flex-col gap-2">
+            <div class="bg-slate-100 dark:bg-navy-900/50 p-4 rounded-2xl rounded-tl-none text-sm text-slate-700 dark:text-slate-300 max-w-[85%] self-start border border-slate-200/50 dark:border-slate-800/50 leading-relaxed">
+              Halo! Saya adalah Assistant AI Rizky. Ada yang bisa saya bantu terkait proyek atau pengalaman kerjanya? 😊
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-4 bg-white/50 dark:bg-navy-950/50 backdrop-blur-md border-t border-slate-200/30 dark:border-slate-800/30">
+          <form id="chat-form" class="flex gap-2 relative">
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Tanya sesuatu..."
+              class="flex-1 bg-white dark:bg-navy-900 px-5 py-3 rounded-2xl text-sm border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-cloud-500 dark:focus:border-cloud-600 transition-all dark:text-white dark:placeholder-slate-500"
+            />
+            <button id="send-chat" type="submit" class="bg-cloud-600 text-white p-3 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-lg shadow-cloud-600/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Toggle Button -->
+      <button
+        id="chat-toggle"
+        class="p-4 rounded-full bg-cloud-600 text-white shadow-2xl shadow-cloud-600/40 hover:scale-110 active:scale-95 transition-all pointer-events-auto"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chat-icon"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl glass-card opacity-0 invisible translate-y-10 transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-cloud-500/20 group"
+      aria-label="Back to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-cloud-600 transition-transform group-hover:-translate-y-1"
+      >
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </button>
   </body>
 </html>

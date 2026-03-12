@@ -1,4 +1,5 @@
 import "./style.css";
+import "./chatbot.js";
 
 console.log("🚀 main.js connected and running...");
 
@@ -421,7 +422,27 @@ function renderExperience() {
 
 // WhatsApp Link
 const waLink = document.getElementById("whatsapp-link");
-waLink.href = `https://wa.me/${PROFILE.whatsapp}?text=${encodeURIComponent("Halo Rizky, saya tertarik untuk berdiskusi tentang proyek.")}`;
+if (waLink) {
+  waLink.href = `https://wa.me/${PROFILE.whatsapp}?text=${encodeURIComponent("Halo Rizky, saya tertarik untuk berdiskusi tentang proyek.")}`;
+}
+
+// Back to Top Logic
+const backToTopBtn = document.getElementById("back-to-top");
+if (backToTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.remove("opacity-0", "invisible", "translate-y-10");
+      backToTopBtn.classList.add("opacity-100", "visible", "translate-y-0");
+    } else {
+      backToTopBtn.classList.add("opacity-0", "invisible", "translate-y-10");
+      backToTopBtn.classList.remove("opacity-100", "visible", "translate-y-0");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
